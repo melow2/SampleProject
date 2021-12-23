@@ -2,7 +2,6 @@ package com.example.episode.di.module
 
 import android.content.Context
 import com.example.episode.BuildConfig
-import com.example.episode.di.DaggerSet
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Lazy
@@ -17,6 +16,8 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Named
 import javax.inject.Singleton
 
+typealias DaggerSet<T> = @JvmSuppressWildcards Set<T>
+typealias DaggerMap<K, V> = @JvmSuppressWildcards Map<K, V>
 
 @InstallIn(SingletonComponent::class)
 @Module
